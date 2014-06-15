@@ -9,7 +9,8 @@
   "dependencies": {
     "marked": "^0.3.2",
     "request": "^2.36.0",
-    "slugger": "^1.0.0"
+    "slugger": "^1.0.0",
+    "underscore": "^1.6.0"
   },
   "homepage": "https://github.com/henrikjoreteg/module-details",
   "keywords": [

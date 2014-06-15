@@ -1,6 +1,7 @@
 var toTitle = require('./lib/to-title');
 var processReadme = require('./lib/process-readme');
 var callRegistry = require('./lib/call-registry');
+var _ = require('underscore');
 
 
 module.exports = function (moduleName, options, cb) {
@@ -24,9 +25,19 @@ module.exports = function (moduleName, options, cb) {
     callRegistry(moduleName, function (err, data) {
         if (err) return cb(err);
         var readmeDetails = processReadme(data, settings);
+        var prev;
         data.title = readmeDetails.title || toTitle(data.name);
         data.html = readmeDetails.html;
         data.toc = readmeDetails.toc;
+        data.npmlink = 'https://npmjs.org/package/' + data.name;
+        data.releases = _.keys(data.versions).map(function (version) {
+            var res = {
+                version: version,
+                diffurl: prev ? (data.homepage + '/compare/v' + prev + '...v' + version) : ''
+            };
+            prev = version;
+            return res;
+        }).reverse();
         cb(null, data);
     });
 };
