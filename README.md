@@ -2,7 +2,7 @@
 
 Give it the name of an npm module and get tons of up-to-date details about it. Useful for things like building static documentation sites that reference npm modules.
 
-Turns out, gettin JSON about a package from npm is super simple, for example just open this in a browser: http://registry.npmjs.org/slugger
+Turns out, getting JSON about a package from npm is super simple, for example just open this in a browser: http://registry.npmjs.org/slugger
 
 So, this module returns everything you can see there. Plus a few more goodies...
 
@@ -15,8 +15,8 @@ So, what it does it this:
     - This is useful for, say, adding a link to the readme saying where the full docs site is.
     - Or hiding other stuff
 - You can also tell it to always hide sections with a certain title. For example, you may be doing this for lots of repos, to merge into a single site and you always want to hide a section in those readmes if they start with `license`.
-- Creates a property called `toc` that it built from the headings in your readme. it includes their text content, heading-level, as well as a link text that can be used to embed an anchor to that.
-- Turns all your headings into github-style headings where you hover and they're links.
+- Creates a property called `toc` that it built from the headings in your readme. it includes their text content, heading-level, as well as a link text that can be used to embed an anchor to that corresponding heading.
+- Turns all your headings into github-style headings where you hover and they're links to themselves.
 
 
 ## install
