@@ -1,7 +1,7 @@
 {
   "name": "module-details",
   "description": "Give it the name of an npm module and get tons of up-to-date details about it. Useful for things like building static documentation sites that reference npm modules.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Henrik Joreteg <henrik@andyet.net>",
   "bugs": {
     "url": "https://github.com/henrikjoreteg/module-details/issues"
