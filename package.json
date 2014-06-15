@@ -23,5 +23,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/henrikjoreteg/module-details"
+  },
+  "scripts": {
+    "test": "node test"
   }
 }

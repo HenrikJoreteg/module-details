@@ -6,7 +6,6 @@ var callRegistry = require('./lib/call-registry');
 module.exports = function (moduleName, options, cb) {
     // make second arg optional
     if (typeof options === 'function') {
-        console.log("TWO ARGS");
         cb = options;
         options = {};
     }
